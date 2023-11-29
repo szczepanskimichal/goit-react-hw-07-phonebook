@@ -14,6 +14,9 @@ export const App = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
 
+  const isLoading = useSelector(state => state.contacts.loading);
+  const isError = useSelector(state => state.contacts.error);
+
   return (
     <div className="wrapper">
       <ContactForm />
